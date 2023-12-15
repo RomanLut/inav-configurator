@@ -6,15 +6,16 @@ var VTX = (function() {
     self.DEV_UNKNOWN = 0xFF;
 
     self.BANDS = [
-        {code: 1, name: 'Boscam A'},
-        {code: 2, name: 'Boscam B'},
-        {code: 3, name: 'Boscam E'},
-        {code: 4, name: 'Fatshark'},
-        {code: 5, name: 'Raceband'},
+        {code: 1, name: '1: Boscam A'},
+        {code: 2, name: '2: Boscam B'},
+        {code: 3, name: '3: Boscam E'},
+        {code: 4, name: '4: Fatshark'},
+        {code: 5, name: '5: Raceband'},
+        {code: 5, name: '6: LowRace'},
     ];
 
     self.BAND_MIN = 1;
-    self.BAND_MAX = 5;
+    self.BAND_MAX = 6;
 
     self.CHANNEL_MIN = 1;
     self.CHANNEL_MAX = 8;
