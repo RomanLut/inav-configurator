@@ -186,7 +186,7 @@ var SITLProcess = {
             }
         }
 
-        callback( sitlExePath + " " + args.join(" ") + "\n");
+        if ( !!callback) callback( sitlExePath + " " + args.join(" ") + "\n");
         this.spawn(sitlExePath, args, callback);
     },
 
