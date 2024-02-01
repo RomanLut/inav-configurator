@@ -11,7 +11,7 @@ var VTX = (function() {
         {code: 3, name: '3: Boscam E'},
         {code: 4, name: '4: Fatshark'},
         {code: 5, name: '5: Raceband'},
-        {code: 5, name: '6: LowRace'},
+        {code: 6, name: '6: LowRace'},
     ];
 
     self.BAND_MIN = 1;
