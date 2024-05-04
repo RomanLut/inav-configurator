@@ -2074,9 +2074,6 @@
     "axisTableTitleAxis": {
         "message": "Axis"
     },
-    "axisTableTitleSlider": {
-        "message": "Slider"
-    },
     "axisTableTitleValue": {
         "message": "Value [degree]"
     },
