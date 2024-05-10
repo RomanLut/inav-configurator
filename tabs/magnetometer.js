@@ -261,7 +261,7 @@ TABS.magnetometer.initialize = function (callback) {
             fix = 1;  //if all angles are 0, then we have to save yaw = 1 (0.1 deg) to enforce usage of angles, not a usage of preset
         }
 		var names = ['DEFAULT', 'CW0', 'CW90', 'CW180', 'CW270', 'CW0FLIP', 'CW90FLIP', 'CW180FLIP', 'CW270FLIP'];
-        var s = "align_mag=" + names[FC.SENSOR_ALIGNMENT.align_mag] +  
+        var s = "align_mag=" + names[SENSOR_ALIGNMENT.align_mag] +  
                 " align_mag_roll=" + (self.isSavePreset ? 0 : self.alignmentConfig.roll * 10) +  
                 " align_mag_pitch=" + (self.isSavePreset ? 0 : self.alignmentConfig.pitch * 10) + 
                 " align_mag_yaw=" + (self.isSavePreset ? 0 : self.alignmentConfig.yaw * 10 + fix);
