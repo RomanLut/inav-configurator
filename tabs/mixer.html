@@ -15,11 +15,26 @@
                                 <span data-i18n="platformType"></span>
                             </label>
                         </div>
-                        <div class="checkbox">
-                            <input id="motor_direction_inverted" type="checkbox" class="toggle" data-setting="motor_direction_inverted" />
-                            <label for="motor_direction_inverted"><span data-i18n="motor_direction_inverted"></span></label>
+                        <div class="radio">
+                            <fieldset>
+                            <legend>Motor direction</legend>
+                            <label for="motor_direction_normal">
+                                <input id="motor_direction_normal" name="motor_direction_inverted" type="radio"
+                                        value="0" data-setting="motor_direction_inverted" class="left" />
+                                <span data-i18n="motor_direction_inverted"></span>
+                            </label><br class="clear-both"/>
+
+                            <label class="checkbox-inline">
+                                <input id="motor_direction_inverted" name="motor_direction_inverted" type="radio"
+                                        value="1" data-setting="motor_direction_inverted" class="left"/>
+                                <span data-i18n="motor_direction_isInverted"></span>
+                            </span></label>
+
                             <div class="helpicon cf_tip" data-i18n_title="motor_direction_inverted_hint"></div>
+                          </fieldset>
                         </div>
+
+
                         <div class="checkbox">
                             <input id="mixer_pid_profile_linking" type="checkbox" class="toggle" data-setting="mixer_pid_profile_linking" />
                             <label for="mixer_pid_profile_linking"><span data-i18n="mixer_pid_profile_linking"></span></label>
@@ -44,7 +59,11 @@
                     <div class="spacer_box">
                         <div class="select position-relative">
                             <div class="mixerPreview" style="max-width: 175px">
-                                <img src="./resources/motor_order/custom.svg" />
+                                <img src="./resources/motor_order/custom.svg" id="motor-mixer-preview-img"/>
+                                <div class="motorNumber is-hidden" id="motorNumber1">1</div>
+                                <div class="motorNumber is-hidden" id="motorNumber2">2</div>
+                                <div class="motorNumber is-hidden" id="motorNumber3">3</div>
+                                <div class="motorNumber is-hidden" id="motorNumber4">4</div>
                             </div>
                             <div class="half" style="width: calc(50% - 10px); margin-left: 10px;">
                                 <select id="mixer-preset"></select>
@@ -52,9 +71,6 @@
 
                             <div class="mixer-load-button">
                                 <div id="needToUpdateMixerMessage" class="is-hidden" data-i18n="mixerNotLoaded"></div>
-                                <div class="btn default_btn narrow green is-hidden">
-                                    <a id="mixer-wizard" href="#" data-i18n="mixerWizard"></a>
-                                </div>
                                 <div class="btn default_btn narrow red">
                                     <a id="load-and-apply-mixer-button" href="#" data-i18n="mixerLoadAndApplyPresetRules"></a>
                                 </div>
@@ -65,6 +81,17 @@
                                     <a id="refresh-mixer-button" href="#" data-i18n="mixerRefreshCurrentRules"></a>
                                 </div>
                             </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="platform-type gui_box grey" id="mixer-wizard-gui_box" is-hidden>
+                    <div class="gui_box_titlebar">
+                        <div class="spacer_box_title" data-i18n="mixerWizard"></div>
+                    </div>
+                
+                    <div class="spacer_box">
+                        <div class="btn default_btn narrow green">
+                            <a id="mixer-wizard" href="#" data-i18n="mixerWizard"></a>
                         </div>
                     </div>
                 </div>
@@ -245,7 +272,8 @@
                 </table>
             </div>
         </div>
-        <div class="modal__buttons">
+
+        <div class="modal__buttons--upbottom">
             <a id="wizard-execute-button" class="modal__button modal__button--main" data-i18n="mixerWizardModalApply"></a>
         </div>
     </div>

@@ -34,71 +34,71 @@
 }
 
 .tab-mission-control .ic_save2FC {
-    background-image: url(../images/icons/cf_icon_MP_save2FC_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_save2FC_grey.svg);
 }
 
 .tab-mission-control .ic_loadFromFC {
-    background-image: url(../images/icons/cf_icon_MP_loadFromFC_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_loadFromFC_grey.svg);
 }
 
 .tab-mission-control .ic_save2File {
-    background-image: url(../images/icons/cf_icon_MP_saveFile_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_saveFile_grey.svg);
 }
 
 .tab-mission-control .ic_loadFromFile {
-    background-image: url(../images/icons/cf_icon_MP_loadFile_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_loadFile_grey.svg);
 }
 
 .tab-mission-control .ic_save2Eprom {
-    background-image: url(../images/icons/cf_icon_MP_save2Eprom_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_save2Eprom_grey.svg);
 }
 
 .tab-mission-control .ic_loadFromEprom {
-    background-image: url(../images/icons/cf_icon_MP_loadFromEprom_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_loadFromEprom_grey.svg);
 }
 
 .tab-mission-control .ic_removeAll {
-    background-image: url(../images/icons/cf_icon_MP_removeAll_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_removeAll_grey.svg);
 }
 
 .tab-mission-control .ic_openMultimission {
-    background-image: url(../images/icons/cf_icon_multimission_white.svg);
+    background-image: url(./../../../images/icons/cf_icon_multimission_white.svg);
 }
 
 .tab-mission-control .ic_save {
-    background-image: url(../images/icons/cf_icon_MP_save_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_save_grey.svg);
 }
 
 .tab-mission-control .ic_cancel {
-    background-image: url(../images/icons/cf_icon_MP_cancel_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_cancel_grey.svg);
 }
 
 .tab-mission-control .ic_add {
-    background-image: url(../images/icons/cf_icon_MP_add_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_add_grey.svg);
 }
 
 .tab-mission-control .ic_show {
-    background-image: url(../images/icons/cf_icon_MP_show_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_show_grey.svg);
 }
 
 .tab-mission-control .ic_hide {
-    background-image: url(../images/icons/cf_icon_MP_hide_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_hide_grey.svg);
 }
 
 .tab-mission-control .ic_play {
-    background-image: url(../images/icons/cf_icon_MP_play_grey.svg);
+    background-image: url(../..//images/icons/cf_icon_MP_play_grey.svg);
 }
 
 .tab-mission-control .ic_stop {
-    background-image: url(../images/icons/cf_icon_MP_stop_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_stop_grey.svg);
 }
 
 .tab-mission-control .ic_center {
-    background-image: url(../images/icons/cf_icon_MP_center_grey.svg);
+    background-image: url(./../../../images/icons/cf_icon_MP_center_grey.svg);
 }
 
 .tab-mission-control .ic_setup {
-    background-image: url(../images/icons/cf_icon_setup_white.svg);
+    background-image: url(./../../../images/icons/cf_icon_setup_white.svg);
 }
 
 .tab-mission-control .btnicon {
@@ -236,10 +236,17 @@
     margin-bottom: 5px;
     margin-left: 5px;
 }
+
 .tab-mission-control .point-label {
     width: 80px;
     display: inline-block;
 }
+
+.tab-mission-control .point-label-safehome {
+    width: 120px;
+    display: inline-block;
+}
+
 .tab-mission-control .point-radio input{
     width: 25px;
     padding-left: 3px;
@@ -308,6 +315,58 @@
 }
 .ol-touch .mission-control-safehome {
     top: 140px;
+}
+
+.geozone-settings {
+    top: 165px;
+    left: .5em;
+}
+.ol-touch .geozone-settings {
+    top: 165px;
+}
+
+.tab-mission-control .geozoneVerticesTable {
+    width: 100%;
+    text-align: center;
+    font-size: 12px;
+}
+
+.tab-mission-control .geozoneVerticesTable input[type="text"] {
+    font-size: 8px;
+    width: 100%;
+}
+
+.tab-mission-control .geozoneVerticesTable input[type="number"] {
+    font-size: 10px;
+    width: 100%;
+    -moz-appearance: textfield;
+}
+
+/* Chrome, Safari, Edge, Opera */
+.tab-mission-control .geozoneVerticesTable input::-webkit-outer-spin-button, input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.tab-mission-control .geozoneVerticesTable thead {
+    display: table-header-group !important;
+}
+
+.tab-mission-control .geozoneVerticesTable thead tr {
+    border-left: 1px solid #e4e4e4;
+    border-right: 1px solid #e4e4e4;
+    background-color: #828885;
+    color: #FFF;
+}
+.tab-mission-control .geozoneVerticesTable td,
+.tab-mission-control .geozoneVerticesTable th {
+    padding: 2px;
+    /* height: 2.5em; */
+}
+
+.tab-mission-control .geozoneVerticesTable tr:nth-child(even) td,
+.tab-mission-control .geozoneVerticesTable tr:nth-child(even) th {
+    background-color: #ebe7e7;
 }
 
 .mission-control-template {
@@ -511,16 +570,12 @@
 
 .tab-mission-control .fill{
     border:none;
-    border-bottom:5px dotted #88CC3E;
     display:inline-block;
     width:20px;
 }
 
 .tab-mission-control .textLegend{
     margin:2px;
-}
-.tab-mission-control .valueLegend{
-    float:right;
 }
 
 .tab-mission-control .userActionContainer {
